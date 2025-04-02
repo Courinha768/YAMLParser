@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sources/yaml/__init__.py
+sources/yaml/decoder.py
+sources/yaml.egg-info/PKG-INFO
+sources/yaml.egg-info/SOURCES.txt
+sources/yaml.egg-info/dependency_links.txt
+sources/yaml.egg-info/top_level.txt
+tests/tests.py
