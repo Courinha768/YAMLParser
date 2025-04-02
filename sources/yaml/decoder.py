@@ -1,9 +1,4 @@
-from base64 import decode
-from types import MappingProxyType
-from typing import Mapping, Any
-
-from django.utils.text import normalize_newlines
-from jinja2.utils import generate_lorem_ipsum
+from typing import Any
 
 class YAMLDecodeError(ValueError):
     """Subclass of ValueError with the following additional properties:

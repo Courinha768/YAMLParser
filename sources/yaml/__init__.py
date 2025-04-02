@@ -1,6 +1,7 @@
 from io import TextIOWrapper
 from typing import Any
 from yaml.decoder import YAMLDecodeError, YAMLDecoder
+from yaml.openapi import resolve_refs
 
 _default_decoder = YAMLDecoder()
 
@@ -22,4 +23,4 @@ def loads(s : str) -> Any:
 			raise TypeError(f'the JSON object must be str, bytes or bytearray, '
 							f'not {s.__class__.__name__}')
 
-	return _default_decoder.decode(s)
+	return resolve_refs(_default_decoder.decode(s))

@@ -25,15 +25,15 @@ class TestYAMLParser(unittest.TestCase):
         """
 		self.assertEqual(yaml.loads(yaml_text), {"items": ["apple", "banana"]})
 
-	# def test_reference_yaml(self):
-	# 	yaml_text = """
-    #     address:
-    #       city: New York
-    #       zip: 10001
-    #     ref_example:
-    #       $ref: "#address"
-    #     """
-	# 	self.assertEqual(yaml.loads(yaml_text), {"city": "New York", "zip": 10001})
+	def test_reference_yaml(self):
+		yaml_text = """
+        address:
+          city: New York
+          zip: 10001
+        ref_example:
+          $ref: "#address"
+        """
+		self.assertEqual(yaml.loads(yaml_text), {"city": "New York", "zip": 10001})
 
 	def test_boolean_and_null_yaml(self):
 		yaml_text = """
